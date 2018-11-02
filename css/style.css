@@ -1,8 +1,51 @@
 body {
-	margin: 0;
+  margin: 0;
+  background-image: url("../images/mindmap.jpg");
 }
 * {
 	box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 1px 1px 15px black;
+}
+
+h2 {
+  text-align: center;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.create-column {
+	-moz-box-shadow: 0px 14px 10px -6px #276873;
+	-webkit-box-shadow: 0px 14px 10px -6px #276873;
+	box-shadow: 0px 14px 10px -6px #276873;
+	background-color:#599bb3;
+	-moz-border-radius:21px;
+	-webkit-border-radius:21px;
+	border-radius:21px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #3d768a;
+}
+.create-column:hover {
+	background-color:#408c99;
+}
+.create-column:active {
+	position:relative;
+	top:1px;
 }
 
 .ui-sortable {
@@ -10,13 +53,14 @@ body {
 }
 .btn-delete {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 22px;
-  height: 22px;
+  right: 1px;
+  top: 1px;
+  width: 21px;
+  height: 21px;
   border: 0;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(184, 0, 0, 0.63);
   color: white;
+  border-radius: 10px;
 }
 /* BOARD */
 .board h1 {
@@ -34,23 +78,43 @@ body {
   order: 1;
   min-width: 300px;
   min-height: 50vh;
-  background-color: lightgrey;
+  background-color: #dfe3e6;
   margin-left: 8px;
   list-style: none;
   position: relative;
+  border-radius: 10px;
 }
 .column-add-card {
-  cursor: pointer;
-  text-decoration: underline;
-  margin: 5px 8px;
-  display: block;
+	-moz-box-shadow: 0px 12px 6px -8px #276873;
+	-webkit-box-shadow: 0px 112px 6px -8px #276873;
+	box-shadow: 0px 12px 6px -8px #276873;
+	background-color:#599bb3;
+	-moz-border-radius:21px;
+	-webkit-border-radius:21px;
+	border-radius:21px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:6px 13px;
+	text-decoration:none;
+  margin: inherit;
+}
+
+.column-add-card:hover {
+	background-color:#408c99;
+}
+.column-add-card:active {
+	position:relative;
+	top:1px;
 }
 
 /* STYLE KARTY */
 .card {
   box-sizing: border-box;
   display: block;
-  height: 60px;
+  height: 50px;
   margin-bottom: 5px;
   padding: 4px;
   overflow: hidden;
@@ -58,11 +122,13 @@ body {
 }
 .card-list {
   list-style: none;
-  margin: 5px;
-  padding: 0px;
+  margin: 7px;
+  padding: 2px;
+  background-color: white;
+  border-radius: 10px;
 }
 .card-description {
-  margin: 2px 0;
+  margin: 2px 25px 2px 2px;
 }
 .card-placeholder {
   box-sizing: border-box;

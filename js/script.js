@@ -112,10 +112,20 @@ $(function(){
   board.createColumn(doneColumn);
 
   // TWORZENIE NOWYCH EGZEMPLARZY KART
-  var card1 = new Card('Nowe zadanie');
-  var card2 = new Card('stworzyc tablice kanban');
+  var card1 = new Card('Zaplanować ślub i zarezerwować salę');
+  var card2 = new Card('Zaplanować wypad do Włoch');
+  var card3 = new Card('Poszukać nowej pracy z fajnymi ludźmi :)');
+  var card4 = new Card('Dokształcać się jako Front end Developer');
+  var card5 = new Card('Napisać portfolio');
+  var card6 = new Card('Wyremontować motocykl');
+  var card7 = new Card('Wysłać zdjęcia do wywołania');
 
   // DODAWANIE KART DO KOLUMN
   todoColumn.createCard(card1);
-  doingColumn.createCard(card2);
+  todoColumn.createCard(card2);
+  doingColumn.createCard(card3);
+  doingColumn.createCard(card4);
+  doneColumn.createCard(card5);
+  doneColumn.createCard(card6);
+  doneColumn.createCard(card7);
 })

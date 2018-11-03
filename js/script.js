@@ -27,11 +27,6 @@ $(function(){
     element: $('#board .column-container')
   };
 
-  $('.create-column')
-  .click(function(){
-    board.createColumn(new Column(prompt('Wpisz nazwę kolumny')));
-  });
-
   // KLASA KANBAN COLUMN
   function Column(name) {
     var self = this;
